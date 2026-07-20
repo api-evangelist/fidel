@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://reference.fidel.uk/reference/authentication
+docs: https://reference.fidel.uk/reference/authentication
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+notes: >-
+  Fidel API authenticates every REST request with a single API key passed in the
+  `fidel-key` HTTP header. Accounts carry both test and live keys, each in a
+  secret (server-side) and public (client/SDK) variant. There is no OAuth 2.0 or
+  OIDC surface, so no scopes artifact applies.
+schemes:
+  - name: fidelKey
+    type: apiKey
+    in: header
+    parameter_name: fidel-key
+    key_kinds:
+      - kind: secret-test
+        prefix: sk_test_
+        usage: server-side calls against the test environment
+      - kind: secret-live
+        prefix: sk_live_
+        usage: server-side calls against the live environment
+      - kind: public-test
+        prefix: pk_test_
+        usage: client-side / SDK card enrollment in the test environment
+      - kind: public-live
+        prefix: pk_live_
+        usage: client-side / SDK card enrollment in the live environment
+    example: "fidel-key: [example key]"
+    sources: [docs]
