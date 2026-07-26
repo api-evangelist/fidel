@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://reference.fidel.uk/reference/introduction
+docs:
+  - https://reference.fidel.uk/reference/authentication
+  - https://docs.fidelapi.com/docs/webhooks
+notes: >-
+  Cross-cutting request/response semantics for the Fidel REST API, harvested
+  from the docs/reference. No idempotency-key contract is documented, so no
+  Idempotency pointer is emitted.
+authentication:
+  style: api-key-header
+  header: fidel-key
+  detail: authentication/fidel-authentication.yml
+base_url: https://api.fidel.uk/v1/
+content_type: application/json
+versioning:
+  style: account-level + uri-path (v1, v2.0)
+  detail: lifecycle/fidel-lifecycle.yml
+pagination:
+  style: cursor
+  params: [start, limit]
+  note: >-
+    List endpoints (transactions, cards, brands, locations) support pagination;
+    exact parameter set is documented per endpoint in the API reference.
+events:
+  style: webhooks
+  detail: asyncapi/fidel-webhooks.yml
+error_envelope:
+  shape: json
+  note: >-
+    Errors are returned as JSON with an error object and HTTP status; the
+    reference documents per-endpoint error responses. No RFC 9457
+    application/problem+json usage was confirmed.
+idempotency:
+  supported: false
+  note: no documented idempotency-key header/parameter

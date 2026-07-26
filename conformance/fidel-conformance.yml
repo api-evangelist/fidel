@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://fidelapi.com/legal/security
+docs:
+  - https://fidelapi.com/legal/security
+  - https://docs.fidelapi.com/docs/select/sdks/security-guidelines
+notes: >-
+  Fidel's core value proposition is that it absorbs PCI scope on behalf of
+  integrators: card details are captured by Fidel's PCI-compliant SDKs, sent
+  directly to Fidel over TLS with end-to-end encryption, tokenized, and never
+  stored as full PAN/CVV. This is a published compliance posture (PCI DSS), so a
+  Compliance pointer is emitted in addition to Conformance.
+standards:
+  - id: pci-dss
+    conforms: true
+    evidence: "PCI-compliant card-capture SDKs; card data tokenized and not stored (docs, security page)"
+  - id: tls-1.2-plus
+    conforms: true
+    evidence: "all requests use TLSv1.2 with end-to-end encryption (security page)"
+  - id: tokenization
+    conforms: true
+    evidence: "proprietary tokenization; only a card id is exchanged with networks (docs)"
+  - id: oauth2
+    conforms: false
+    evidence: "API-key auth (fidel-key header); no OAuth2 surface"
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: "no published application/problem+json usage confirmed"

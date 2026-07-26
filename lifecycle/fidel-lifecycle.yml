@@ -1,0 +1,18 @@
+generated: '2026-07-19'
+method: searched
+source: https://reference.fidel.uk/reference/introduction
+notes: >-
+  Fidel versions the REST API at the account level. The classic Select /
+  card-linking surface is exposed under the v1 path (api.fidel.uk/v1) and
+  documented at reference.fidel.uk; a newer Transaction Stream v2.0 surface is
+  documented separately at transaction-stream.fidel.uk/v2.0. A public status
+  page is published. No formal, dated deprecation-policy page was confirmed, so
+  no Deprecation pointer is emitted.
+versioning:
+  scheme: account-level + uri-path
+  current:
+    - v1
+    - v2.0
+  docs: https://reference.fidel.uk/reference/introduction
+status_page: https://status.fidel.uk
+deprecated_operations: []

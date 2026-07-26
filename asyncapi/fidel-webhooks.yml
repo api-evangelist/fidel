@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+type: Webhooks
+source: https://docs.fidelapi.com/docs/webhooks
+docs: https://docs.fidelapi.com/docs/webhooks
+notes: >-
+  Fidel delivers transaction and lifecycle events to consumer endpoints via
+  webhooks. When a linked card is used at a participating merchant, Fidel spots
+  the transaction on the card network and posts it to your server in real time.
+  No published AsyncAPI document exists; this is the webhook event catalog
+  captured from the docs (type: Webhooks).
+transport: https-post
+registration: created per program via the Webhooks API / dashboard
+events:
+  - name: transaction.auth
+    description: A real-time authorization on a linked card was detected.
+  - name: transaction.clearing
+    description: A previously authorized transaction cleared/settled.
+  - name: transaction.refund
+    description: A refund was observed on a linked card.
+  - name: card.linked
+    description: A card was successfully linked/enrolled to a program.
+  - name: card.failed
+    description: A card link/enrollment attempt failed.
+  - name: brand.consent
+    description: A brand granted or updated consent (multi-brand programs).
+  - name: program.status
+    description: A program's status changed.

@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Enigmatic-Smile
+notes: >-
+  Fidel is a card-linking / payments-data platform. Its first-party client
+  libraries are card-capture SDKs (Web + mobile) whose job is PCI-compliant
+  secure collection of card details; there is no first-party server-side REST
+  SDK on npm/PyPI (the REST API is called directly with the fidel-key header).
+packages:
+  - language: javascript
+    registry: npm
+    name: fidel-react-native
+    url: https://www.npmjs.com/package/fidel-react-native
+    install: npm install fidel-react-native
+    repo: https://github.com/Enigmatic-Smile/rn-sdk
+    version: 3.2.0
+    official: true
+    kind: card-capture-sdk
+  - language: swift
+    registry: cocoapods
+    name: Fidel
+    url: https://cocoapods.org/pods/Fidel
+    install: "pod 'Fidel'"
+    repo: https://github.com/Enigmatic-Smile/fidel-ios
+    official: true
+    kind: card-capture-sdk
+  - language: swift
+    registry: swift-package-manager
+    name: fidel-ios
+    url: https://github.com/Enigmatic-Smile/fidel-ios
+    install: "https://github.com/Enigmatic-Smile/fidel-ios"
+    repo: https://github.com/Enigmatic-Smile/fidel-ios
+    official: true
+    kind: card-capture-sdk
+  - language: kotlin
+    registry: maven
+    name: fidel-android
+    url: https://github.com/Enigmatic-Smile/fidel-android
+    install: "implementation 'com.fidelapi:fidel-android'"
+    repo: https://github.com/Enigmatic-Smile/fidel-android
+    official: true
+    kind: card-capture-sdk
+  - language: javascript
+    registry: cdn
+    name: Fidel Web SDK
+    url: https://docs.fidelapi.com/docs/select/sdks/web
+    install: "<script src=\"https://resources.fidel.uk/sdk/js/v3/fidel.js\"></script>"
+    official: true
+    kind: card-capture-sdk

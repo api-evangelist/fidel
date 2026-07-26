@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fidelapi.com/docs/select/sdks
+docs: https://docs.fidelapi.com/docs/select/sdks
+notes: >-
+  Distinct from server SDKs: Fidel ships embeddable, PCI-compliant card-capture
+  UI surfaces that render a secure card-entry form and send card details
+  directly to Fidel (the integrator's servers never see the PAN/CVV). Available
+  for Web and the three mobile runtimes.
+families:
+  - family: card-enrollment-ui
+    description: Secure, PCI-compliant card capture / enrollment surface.
+    components:
+      - name: Fidel Web SDK
+        runtime: web
+        loader: "https://resources.fidel.uk/sdk/js/v3/fidel.js"
+        docs: https://docs.fidelapi.com/docs/select/sdks/web
+      - name: Fidel iOS SDK
+        runtime: ios
+        loader: "pod 'Fidel' / SwiftPM github.com/Enigmatic-Smile/fidel-ios"
+        docs: https://docs.fidelapi.com/docs/select/sdks/ios
+      - name: Fidel Android SDK
+        runtime: android
+        loader: "com.fidelapi:fidel-android"
+        docs: https://docs.fidelapi.com/docs/select/sdks/android
+      - name: Fidel React Native SDK
+        runtime: react-native
+        loader: "npm i fidel-react-native"
+        docs: https://docs.fidelapi.com/docs/select/sdks/react-native

@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+host: https://api.fidel.uk
+notes: >-
+  Probed the API host and the marketing host for the standard discovery surface.
+  No machine-readable .well-known document is published. The marketing host
+  returns its SPA HTML shell (Gatsby) for /.well-known/security.txt with a 200
+  status, i.e. a soft-404 rather than an RFC 9116 document, so it is recorded as
+  not-found. Absence is valid, expected data.
+documents:
+  - path: /.well-known/security.txt
+    host: https://api.fidel.uk
+    status: 404
+  - path: /.well-known/security.txt
+    host: https://fidelapi.com
+    status: 200
+    real: false
+    note: returns Gatsby SPA HTML, not an RFC 9116 security.txt (soft-404)
+  - path: /.well-known/openid-configuration
+    host: https://api.fidel.uk
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    host: https://api.fidel.uk
+    status: 404
+  - path: /.well-known/api-catalog
+    host: https://api.fidel.uk
+    status: 404

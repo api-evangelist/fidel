@@ -1,0 +1,62 @@
+generated: '2026-07-19'
+method: searched
+source: https://reference.fidel.uk/reference/introduction
+docs: https://reference.fidel.uk/reference/introduction
+notes: >-
+  Entity-relationship graph for the Fidel card-linking domain, captured from the
+  API object reference (no OpenAPI is published to derive from mechanically).
+  A Program is the top-level container; Cards are enrolled into a Program;
+  Transactions are observed on Cards at Brand Locations; Offers reward
+  qualifying Transactions.
+entities:
+  - name: Program
+    description: Top-level container that groups cards, brands and configuration.
+  - name: Card
+    description: A payment card (Visa/Mastercard/Amex) enrolled into a program; tokenized, no full PAN stored.
+  - name: Transaction
+    description: An enriched, real-time transaction observed on a linked card at a participating merchant.
+  - name: Brand
+    description: A merchant/brand whose transactions are tracked (multi-brand programs use brand consent).
+  - name: Location
+    description: A physical or online location belonging to a brand where qualifying transactions occur.
+  - name: Offer
+    description: A card-linked offer/reward configured against brands and locations.
+  - name: Webhook
+    description: A registered consumer endpoint receiving program events.
+relationships:
+  - from: Card
+    to: Program
+    type: belongs_to
+    via: programId
+  - from: Transaction
+    to: Card
+    type: belongs_to
+    via: cardId
+  - from: Transaction
+    to: Brand
+    type: belongs_to
+    via: brandId
+  - from: Transaction
+    to: Location
+    type: belongs_to
+    via: locationId
+  - from: Location
+    to: Brand
+    type: belongs_to
+    via: brandId
+  - from: Offer
+    to: Brand
+    type: belongs_to
+    via: brandId
+  - from: Program
+    to: Card
+    type: has_many
+    via: programId
+  - from: Brand
+    to: Location
+    type: has_many
+    via: brandId
+  - from: Program
+    to: Webhook
+    type: has_many
+    via: programId

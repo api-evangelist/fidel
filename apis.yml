@@ -1,7 +1,17 @@
 aid: fidel
 name: Fidel
-description: Fidel is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Fidel (Enigmatic Smile Ltd, trading as Fidel API) is a card-linking and
+  payments-data platform that lets developers connect Visa, Mastercard and Amex
+  cards to web and mobile applications through a single API. PCI-compliant
+  card-capture SDKs (Web, iOS, Android, React Native) securely tokenize card
+  details, and Fidel then delivers enriched, real-time transaction records to
+  the integrator's servers over webhooks whenever a linked card is used at a
+  participating merchant. Products include the Select Transactions API, an Offers
+  / card-linked-rewards API, card enrollment SDKs, and attribution & insights.
+  Founded in 2015 and headquartered in the UK, Fidel operates in the United
+  States, United Kingdom, Ireland, Canada, Sweden and the UAE, and absorbs PCI
+  scope on behalf of its integrators.
 url: https://raw.githubusercontent.com/api-evangelist/fidel/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +19,56 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://fidelapi.com/fidel_social.png
 tags:
 - Company
-apis: []
+- Payments
+- Card Linking
+- Transactions
+- Fintech
+- Embedded Finance
+- Loyalty
+- Rewards
+- Webhooks
+- SDKs
+apis:
+- name: Fidel API
+  description: >-
+    Card-linking REST API — programs, cards, transactions, brands, locations,
+    offers and webhooks. Enroll Visa/Mastercard/Amex cards via PCI-compliant
+    SDKs and receive enriched real-time transactions over webhooks.
+  humanURL: https://docs.fidelapi.com/docs/select
+  baseURL: https://api.fidel.uk/v1/
+  tags:
+  - Payments
+  - Card Linking
+  - Transactions
+  properties:
+  - type: APIReference
+    url: https://reference.fidel.uk/reference/introduction
+  - type: Authentication
+    url: authentication/fidel-authentication.yml
+  - type: Webhooks
+    url: asyncapi/fidel-webhooks.yml
+  - type: Sandbox
+    url: sandbox/fidel-sandbox.yml
+  - type: DataModel
+    url: data-model/fidel-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +77,58 @@ maintainers:
 common:
 - type: Website
   url: https://fidelapi.com
+- type: DeveloperPortal
+  url: https://dashboard.fidel.uk
+- type: Documentation
+  url: https://docs.fidelapi.com/docs/select
+- type: APIReference
+  url: https://reference.fidel.uk/reference/introduction
+- type: GettingStarted
+  url: https://docs.fidelapi.com/docs/select/getting-started/
+- type: Support
+  url: https://fidellimited.zendesk.com/
+- type: Blog
+  url: https://fidelapi.com/blog
+- type: GitHubOrganization
+  url: https://github.com/Enigmatic-Smile
+- type: Pricing
+  url: https://fidelapi.com/pricing
+- type: SignUp
+  url: https://dashboard.fidel.uk/sign-up
+- type: TermsOfService
+  url: https://fidelapi.com/legal
+- type: PrivacyPolicy
+  url: https://fidelapi.com/legal/privacy
+- type: StatusPage
+  url: https://status.fidel.uk
+- type: Packages
+  url: packages/fidel-packages.yml
+- type: SDKs
+  url: packages/fidel-packages.yml
+- type: Authentication
+  url: authentication/fidel-authentication.yml
+- type: Webhooks
+  url: asyncapi/fidel-webhooks.yml
+- type: Sandbox
+  url: sandbox/fidel-sandbox.yml
+- type: Conventions
+  url: conventions/fidel-conventions.yml
+- type: Conformance
+  url: conformance/fidel-conformance.yml
+- type: Compliance
+  url: https://fidelapi.com/legal/security
+- type: Lifecycle
+  url: lifecycle/fidel-lifecycle.yml
+- type: Components
+  url: components/fidel-components.yml
+- type: DataModel
+  url: data-model/fidel-data-model.yml
+- type: DomainSecurity
+  url: security/fidel-domain-security.yml
+- type: LLMsTxt
+  url: llms/fidel-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

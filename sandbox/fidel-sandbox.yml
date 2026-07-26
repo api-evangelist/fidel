@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.fidelapi.com/docs/select/cards
+docs:
+  - https://docs.fidelapi.com/docs/select/cards
+  - https://fidelapi.com/faq/sandbox
+summary: >-
+  Fidel provides a full test environment reached with test API keys. The test
+  environment does not accept real card numbers; instead you link one of the
+  published test card numbers with any future expiry date and a three-letter
+  country code. Card details are tokenized and never stored (no full PAN/CVV).
+environments:
+  - name: test
+    selected_by: test API keys (sk_test_ / pk_test_)
+    accepts_live_cards: false
+  - name: live
+    selected_by: live API keys (sk_live_ / pk_live_)
+    accepts_live_cards: true
+test_cards:
+  # published verbatim in the Fidel test-card reference
+  - number: '4444000000004278'
+    network: Visa
+  - number: '5555000000005093'
+    network: Mastercard
+  - number: '340000000000301'
+    network: Amex
+  - number: '370000000000388'
+    network: Amex
+test_card_rules:
+  expiry: any date in the future
+  country_code: three-letter country code (e.g. GBR, USA)
+  note: >-
+    Fidel documents that an asterisk (*) in a published test-card pattern
+    represents any digit; the four values above are concrete published examples.
