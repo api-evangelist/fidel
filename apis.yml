@@ -39,6 +39,17 @@ tags:
 - Company
 - Payments
 - Card Linking
+- Transaction
+- Fintech
+- Embedded Finance
+- Loyalty
+- Rewards
+- Webhook
+- SDK
+tags_raw:
+- Company
+- Payments
+- Card Linking
 - Transactions
 - Fintech
 - Embedded Finance
@@ -55,6 +66,10 @@ apis:
   humanURL: https://docs.fidelapi.com/docs/select
   baseURL: https://api.fidel.uk/v1/
   tags:
+  - Payments
+  - Card Linking
+  - Transaction
+  tags_raw:
   - Payments
   - Card Linking
   - Transactions
