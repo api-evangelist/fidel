@@ -59,6 +59,7 @@ tags:
 - Rewards
 - Webhook
 - SDK
+- Loyalty & Incentives
 tags_raw:
 - Company
 - Payments
@@ -70,6 +71,7 @@ tags_raw:
 - Rewards
 - Webhooks
 - SDKs
+- Loyalty & Incentives
 apis:
 - name: Fidel API
   description: >-
