@@ -64,6 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Fidel is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Fidel (Enigmatic Smile Ltd, trading as Fidel API) is a card-linking and payments-data platform that lets developers connect Visa, Mastercard and Amex cards to web and mobile applications through a single API. PCI-compliant card-capture SDKs (Web, iOS, Android, React Native) securely tokenize card details, and Fidel then delivers enriched, real-time transaction records to the integrator's servers over webhooks whenever a linked card is used at a participating merchant. Products include the Select Transactions API, an Offers / card-linked-rewards API, card enrollment SDKs, and attribution & insights. Founded in 2015 and headquartered in the UK, Fidel operates in the United States, United Kingdom, Ireland, Canada, Sweden and the UAE, and absorbs PCI scope on behalf of its integrators.
 
-Backed by: 500-global — https://fidelapi.com
+**Areas:** Company · Payments · Card Linking · Transaction · Fintech · Embedded Finance · Loyalty · Rewards · Webhook · SDK · Loyalty & Incentives
+
+## Fidel on APIs.io
+
+Everything profiled for Fidel is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fidel/](https://apis.io/providers/fidel/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Fidel API](https://apis.io/apis/fidel/fidel-api/) — Card-linking REST API — programs, cards, transactions, brands, locations, offers and webhooks. Enroll Visa/Mastercard/Amex cards via PCI-compliant SDKs and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Fidel Webhooks](https://apis.io/asyncapis/fidel/fidel-webhooks/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Fidel Authentication](https://apis.io/security/fidel/fidel-authentication/)
+- [Fidel Domain Security](https://apis.io/security/fidel/fidel-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://fidelapi.com)
+- [Documentation](https://docs.fidelapi.com/docs/select)
+- [Getting started](https://docs.fidelapi.com/docs/select/getting-started/)
+- [API reference](https://reference.fidel.uk/reference/introduction)
+- [Pricing](https://fidelapi.com/pricing)
+- [Sign up](https://dashboard.fidel.uk/sign-up)
+- [Support](https://fidellimited.zendesk.com/)
+- [Blog](https://fidelapi.com/blog)
+- [Compliance](https://fidelapi.com/legal/security)
+- [Terms of service](https://fidelapi.com/legal)
+- [Privacy policy](https://fidelapi.com/legal/privacy)
+- [GitHub](https://github.com/Enigmatic-Smile)
+- [Status](https://status.fidel.uk)
+
+## API Evangelist rating
+
+**Kin Score 39.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 44.0 |
+| Access clarity | 28.9 |
+
+**Agent readiness 19.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 33.9** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/fidel/](https://apis.io/providers/fidel/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Fidel: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fidel/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
